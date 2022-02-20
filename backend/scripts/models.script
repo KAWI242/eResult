@@ -1,0 +1,7 @@
+npx sequelize-cli  model:generate --name User --attributes name:string,account:string,password:string,isAdmin:boolean
+npx sequelize-cli  model:generate --name Patient --attributes name:string,gender:string,age:number
+npx sequelize-cli  model:generate --name Test --attributes testDate:date,sampleId:string,result:string
+
+
+//reverse data model
+npx sequelize-auto -o "./models" -d ./data/sequelize_dev.db -h localhost  -e sqlite
